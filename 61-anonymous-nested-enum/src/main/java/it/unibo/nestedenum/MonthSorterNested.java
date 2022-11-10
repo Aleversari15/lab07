@@ -44,7 +44,7 @@ public final class MonthSorterNested implements MonthSorter {
         }
 
         public Month fromString(final String stringa){
-
+            return GENNAIO;
         }
    }
 }
