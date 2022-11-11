@@ -4,7 +4,7 @@ import it.unibo.mvc.api.DrawNumberController;
 import it.unibo.mvc.api.DrawNumberView;
 import it.unibo.mvc.api.DrawResult;
 
-public class DrawNumberStdOutView implements DrawNumberView{
+public class DrawNumberStdoutView implements DrawNumberView{
    
     @Override
     public void setController(final DrawNumberController observer) {
