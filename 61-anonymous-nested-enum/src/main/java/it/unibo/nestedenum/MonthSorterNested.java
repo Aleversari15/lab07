@@ -1,8 +1,6 @@
 package it.unibo.nestedenum;
 
 import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Implementation of {@link MonthSorter}.
@@ -59,12 +57,10 @@ public final class MonthSorterNested implements MonthSorter {
             } catch (IllegalArgumentException e) {
                 Month match = null;
                 int matchCounter = 0;
-                final List<Month> matchList = new LinkedList<>();
                 for (final Month m : Month.values()) {
                     if (m.name().toLowerCase().startsWith(input.toLowerCase())) {
                         match = m;
                         matchCounter++;
-                        matchList.add(m);
                     }
                 }
                 switch (matchCounter) {
@@ -74,7 +70,7 @@ public final class MonthSorterNested implements MonthSorter {
                         return match;
                     default:
                         throw new IllegalArgumentException(
-                            input + "is ambiguos. Valid matched are " + matchList.toString(),e
+                            input + "is ambiguos ",e 
                         );
                 }
         }
